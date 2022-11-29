@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  MIDI_file: one
+  time_to_expiration: 2022-11-29 20:42:52
+
+two:
+  MIDI_file: two
+  time_to_expiration: 2022-11-29 20:42:52

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  User: one
+  MIDI_file: one
+  can_edit: false
+
+two:
+  User: two
+  MIDI_file: two
+  can_edit: false

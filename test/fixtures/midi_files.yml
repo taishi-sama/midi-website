@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filename: MyString
+  song_name: MyString
+  author: MyString
+  public: false
+
+two:
+  filename: MyString
+  song_name: MyString
+  author: MyString
+  public: false
