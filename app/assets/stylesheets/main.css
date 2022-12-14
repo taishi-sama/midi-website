@@ -3,6 +3,10 @@
 }
    
 .user_data_form{
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 20px;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,4 +16,36 @@
 .input_item {
        display: flex;
        justify-content: space-between;
+}
+.submit_button {
+    align-self: center;
+}
+.site-header {
+    position: relative;
+    display: grid;
+    box-sizing: border-box;
+    /*width: 100%;*/
+    height: 100px;
+    background-color: gray;
+    grid-template-columns: repeat(5, 1fr);
+}
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #EAEAEA;
+}
+.login-buttons {
+    display:grid;
+    grid-column: 6;
+    width: 20ch;
+    box-sizing: content-box;
+    align-self: flex-start;
+    border-radius: 5ch;
+    background-color: #B00100;
+}
+.login-button {
+    color: aliceblue;
+    text-align: center;
+
+    text-decoration: none;
 }
