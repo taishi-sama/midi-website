@@ -12,13 +12,13 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_12_16_141230) do
   create_table "accesses", force: :cascade do |t|
-    t.integer "User_id", null: false
-    t.integer "MIDI_file_id", null: false
+    t.integer "user_id", null: false
+    t.integer "midi_file_id", null: false
     t.boolean "can_edit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["MIDI_file_id"], name: "index_accesses_on_MIDI_file_id"
-    t.index ["User_id"], name: "index_accesses_on_User_id"
+    t.index ["midi_file_id"], name: "index_accesses_on_midi_file_id"
+    t.index ["user_id"], name: "index_accesses_on_user_id"
   end
 
   create_table "active_admin_comments", force: :cascade do |t|
@@ -76,15 +76,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_141230) do
   end
 
   create_table "links", force: :cascade do |t|
-    t.integer "MIDI_file_id", null: false
+    t.integer "midi_file_id", null: false
     t.datetime "time_to_expiration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["MIDI_file_id"], name: "index_links_on_MIDI_file_id"
+    t.index ["midi_file_id"], name: "index_links_on_midi_file_id"
   end
 
   create_table "midi_files", force: :cascade do |t|
-    t.string "filename"
     t.string "song_name"
     t.string "author"
     t.boolean "public"
@@ -100,9 +99,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_141230) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "accesses", "MIDI_files"
-  add_foreign_key "accesses", "Users"
+  add_foreign_key "accesses", "midi_files"
+  add_foreign_key "accesses", "users"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "links", "MIDI_files"
+  add_foreign_key "links", "midi_files"
 end

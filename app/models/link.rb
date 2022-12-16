@@ -1,3 +1,3 @@
 class Link < ApplicationRecord
-  belongs_to :MIDI_file
+  belongs_to :midi_file
 end

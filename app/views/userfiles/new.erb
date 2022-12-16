@@ -1,0 +1,7 @@
+
+
+<div class = "music_list">
+<% @files.each do |song| %>
+    <%=render partial: 'shared/song', locals: {song: song}%>
+<% end %>
+</div>

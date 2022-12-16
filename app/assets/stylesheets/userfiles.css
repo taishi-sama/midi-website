@@ -1,0 +1,6 @@
+.music_list {
+    overflow:hidden; 
+    overflow-y:scroll;
+    height:200px; 
+    width:18%;
+}

@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   post '/login', to: 'login#create'
   get '/logout', to: 'login#destroy'
 
+  get '/userfiles', to: 'userfiles#new'
+  post '/userfiles', to: 'userfiles#create'
+  delete '/userfiles', to: 'userfiles#delete'
+  
+
 end

@@ -14,6 +14,9 @@
     <header class='site-header'>
       <div class='nav-buttons'>
         <%= link_to 'На главную', root_path, class: 'login-button' %>
+        <% if session[:user_id] %>
+          <%= link_to 'Загруженные файлы', userfiles_path, class: 'login-button' %>
+        <% end %>
       </div>
       <div class='login-buttons'>
       <% unless session[:user_id] %>
