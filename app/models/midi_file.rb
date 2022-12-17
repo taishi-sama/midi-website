@@ -1,7 +1,8 @@
 class MidiFile < ApplicationRecord
     validates :song_name, :public, presence: true
+    belongs_to :user
     has_many :accesses, dependent: :destroy
-    has_many :users, through: :accesses
+    has_many :accessed_users, through: :accesses, class_name: :users
     has_many :links, dependent: :destroy
 
     has_one_attached :midi

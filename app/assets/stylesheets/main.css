@@ -2,24 +2,7 @@
     color: #B00100;
 }
    
-.user_data_form{
-    background-color: lightgrey;
-    border-radius: 20px;
-    padding: 20px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30%;
-    height: 200px;
-}
-.input_item {
-       display: flex;
-       justify-content: space-between;
-}
-.submit_button {
-    align-self: center;
-}
+
 .site-header {
     position: relative;
     display: grid;
@@ -46,6 +29,17 @@ body {
 .login-button {
     color: aliceblue;
     text-align: center;
-
     text-decoration: none;
 }
+.nav-buttons {
+    display: grid;
+    grid-column: 1;
+    width: 20ch;
+    background-color: darkgray;
+    border-radius:  2ch;
+}
+.nav-button {
+    text-align: center;
+    
+}
+

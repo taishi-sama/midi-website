@@ -87,8 +87,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_141230) do
     t.string "song_name"
     t.string "author"
     t.boolean "public"
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_midi_files_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -104,4 +106,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_141230) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "links", "midi_files"
+  add_foreign_key "midi_files", "users"
 end

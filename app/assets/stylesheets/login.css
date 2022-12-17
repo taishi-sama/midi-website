@@ -1,0 +1,20 @@
+.user_data_form{
+    background-color: lightgrey;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    max-height: 200px;
+    min-width: 300px;
+}
+.input_item {
+       display: flex;
+       justify-content: space-between;
+
+}
+.submit_button {
+    align-self: center;
+}
