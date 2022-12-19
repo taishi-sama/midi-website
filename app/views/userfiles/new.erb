@@ -5,3 +5,28 @@
     <%=render partial: 'shared/song', locals: {song: song}%>
 <% end %>
 </div>
+
+<div data-turbo="false">
+    <%= form_for :midi_file, class: 'user_data_form' do |f| %>
+    <div class="input_item">
+        <%= label_tag :song_name, 'Название песни' %>
+        <%= f.text_field :song_name %>
+    </div>
+    <div class="input_item">
+        <%= label_tag :author, 'Автор песни' %>
+        <%= f.text_field :author %>
+    </div>
+    <div class="input_item">
+        <%= label_tag :public, 'Публично доступно?' %>
+        <%= f.check_box :public %>
+    </div>
+    <div class="input_item">
+        <%= f.file_field :midi, direct_upload: true, accept: 'audio/midi' %>
+    </div>
+    
+    <div class="submit_button">
+      <%= f.submit 'Загрузить' %>
+    </div>
+    <% end %>
+    <%= render 'shared/errors' %>
+</div>
