@@ -72,6 +72,7 @@ group :test do
   gem "webdrivers"
 end
 
+gem "resque"
 
 #Active admin
 gem 'activeadmin'
