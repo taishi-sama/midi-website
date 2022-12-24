@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'player/play'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -16,5 +17,5 @@ Rails.application.routes.draw do
   post '/userfiles', to: 'userfiles#create'
   delete '/userfiles', to: 'userfiles#delete'
   
-
+  get '/play', to: 'player#play'
 end

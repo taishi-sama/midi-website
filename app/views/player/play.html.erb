@@ -1,0 +1,7 @@
+<h1>Player#play</h1>
+
+<% unless @current_song.fluidsynth.blank? %> 
+<audio controls>
+  <source src=<%=rails_blob_path(@current_song.fluidsynth)%> type="audio/ogg">
+</audio>
+<% end %>

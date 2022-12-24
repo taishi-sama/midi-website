@@ -4,3 +4,6 @@
 <div class = 'music_song_name'>
     <%=song.song_name%>
 </div>
+<div class = 'music_song_goto_play'>
+    <%= link_to "Послушать", play_path(id: song.id) %>
+</div>

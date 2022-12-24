@@ -16,3 +16,6 @@
 .music_song_name {
     grid-column: 2;
 }
+.music_song_goto_play {
+    grid-column: 3;
+}

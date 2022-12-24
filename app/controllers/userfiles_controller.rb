@@ -9,6 +9,8 @@ class UserfilesController < ApplicationController
     unless f.save
       flash[:error] = f.errors.full_messages;
       p[:midi].purge
+    else
+      MidiConvertFluidsynthJob.perform_later(f)
     end
     redirect_to userfiles_path
   end
