@@ -1,7 +1,7 @@
 class MidiFile < ApplicationRecord
     validates :song_name, :midi, presence: true
     validates :public, exclusion: [nil]
-    validates :validate_midi_max_size
+    validate :validate_midi_max_size
     belongs_to :user
     has_many :accesses, dependent: :destroy
     has_many :accessed_users, through: :accesses, class_name: :users
