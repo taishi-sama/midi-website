@@ -8,7 +8,7 @@ class UserfilesController < ApplicationController
     f = User.find(session[:user_id]).midi_files.new(p);
     unless f.save
       flash[:error] = f.errors.full_messages;
-      p[:midi].purge
+      f.midi.purge
     else
       MidiConvertFluidsynthJob.perform_now(f)
     end
