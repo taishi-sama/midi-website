@@ -80,6 +80,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
+gem 'activeadmin_addons'
 # Use Sass to process CSS
 gem "sassc-rails"
 
