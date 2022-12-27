@@ -24,7 +24,9 @@ class MidiFile < ApplicationRecord
     end
     private
     def validate_midi_max_size
-        if midi.byte_size > 1024 * 1024
+        if midi.blank?
+            errors.add(:midi, 'File is empty')
+        elsif midi.byte_size > 1024 * 1024
             errors.add(:midi, 'File can\'t be larger 1 megabyte')
         end
     end
