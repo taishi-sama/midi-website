@@ -5,6 +5,8 @@
     padding: 10px;
     overflow:hidden; 
     overflow-y:scroll;
+    overflow-x: auto;
+    overflow-wrap: normal;
     display:grid;
     min-height: 100px;
     height:80%; 
