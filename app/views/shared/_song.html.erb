@@ -1,9 +1,28 @@
+<% editable = song.editable_for?(session[:user_id]) %>
+
 <div class = 'music_author'>
     <%=song.author%>
 </div>
 <div class = 'music_song_name'>
     <%=song.song_name%>
 </div>
+<% if editable %>
+<div class = 'music_is_public'>
+    <% if song.public %>
+        Публично
+    <% else %>
+        Не публично
+    <% end %>
+</div>
+<% end %>
+
 <div class = 'music_song_goto_play'>
+    <% if song.fluidsynth.present? %>
     <%= link_to "Послушать", play_path(id: song.id) %>
+    <% end %>
+</div>
+<div class = 'music_song_delete'>
+    <% if editable%>
+        <%= button_to "Удалить", userfiles_path(midi_file: {id: song.id}), method: :delete %>
+    <% end %>
 </div>

@@ -1,5 +1,8 @@
 .music_list {
     margin: 20px;
+    background-color: lightgrey;
+    border-radius: 1ch;
+    padding: 10px;
     overflow:hidden; 
     overflow-y:scroll;
     display:grid;
@@ -16,6 +19,13 @@
 .music_song_name {
     grid-column: 2;
 }
-.music_song_goto_play {
+.music_is_public {
     grid-column: 3;
+}
+
+.music_song_goto_play {
+    grid-column: 4;
+}
+.music_song_delete {
+    grid-column: 5;
 }
