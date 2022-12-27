@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/userfiles', to: 'userfiles#new'
   post '/userfiles', to: 'userfiles#create'
   delete '/userfiles', to: 'userfiles#delete'
-  
+  patch '/userfiles/togglepublicity', to: 'userfiles#toggle_publicity'
+
   get '/play', to: 'player#play'
 end

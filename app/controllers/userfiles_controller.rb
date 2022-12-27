@@ -15,7 +15,7 @@ class UserfilesController < ApplicationController
     redirect_to userfiles_path
   end
   def delete
-    p = midifile_delete_params;
+    p = midifile_delete_toggle_params;
     f = MidiFile.find(p[:id])
     if f.editable_for?(session[:user_id])
       f.destroy();
@@ -23,7 +23,14 @@ class UserfilesController < ApplicationController
     end
     redirect_to userfiles_path
   end
-  def change
+  def toggle_publicity
+    p = midifile_delete_toggle_params;
+    f = MidiFile.find(p[:id])
+    if f.editable_for?(session[:user_id])
+      f.destroy();
+    else      
+    end
+    redirect_to userfiles_path
   end
   private
   def midifile_params
@@ -31,7 +38,7 @@ class UserfilesController < ApplicationController
         .with_defaults(public: 0)
         .permit(:midi, :song_name, :author, :public)   
   end
-  def midifile_delete_params
+  def midifile_delete_toggle_params
     params.require(:midi_file)
         .permit(:id)
   end
