@@ -1,9 +1,5 @@
-
-
-
-
 <div data-turbo="false">
-    <%= form_for :midi_file, class: 'user_data_form' do |f| %>
+    <%= form_for :midifile, class: 'user_data_form' do |f| %>
     <div class="input_item">
         <%= label_tag :song_name, 'Название песни' %>
         <%= f.text_field :song_name %>
@@ -16,18 +12,11 @@
         <%= label_tag :public, 'Публично доступно?' %>
         <%= f.check_box :public %>
     </div>
-    <div class="input_item">
-        <%= f.file_field :midi, direct_upload: true, accept: 'audio/midi,audio/x-midi' %>
-    </div>
-    
+    <%= f.hidden_field :id%>
+
     <div class="submit_button">
-      <%= f.submit 'Загрузить' %>
+      <%= f.submit  %>
     </div>
     <% end %>
     <%= render 'shared/errors' %>
-</div>
-<div class = "music_list">
-<% @files.each do |song| %>
-    <%=render partial: 'shared/song', locals: {song: song}%>
-<% end %>
 </div>

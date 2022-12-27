@@ -1,5 +1,5 @@
 .music_list {
-    margin: 20px;
+    margin: auto;
     background-color: lightgrey;
     border-radius: 1ch;
     padding: 10px;
@@ -26,6 +26,9 @@
 .music_song_goto_play {
     grid-column: 4;
 }
-.music_song_delete {
+.music_song_edit {
     grid-column: 5;
+}
+.music_song_delete {
+    grid-column: 6;
 }

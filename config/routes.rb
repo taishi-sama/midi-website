@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   patch '/userfiles/togglepublicity', to: 'userfiles#toggle_publicity'
 
   get '/play', to: 'player#play'
+
+  get '/editfiles', to: 'editfiles#get'
+  post '/editfiles', to: 'editfiles#post'
 end

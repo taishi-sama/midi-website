@@ -21,8 +21,11 @@
     <%= link_to "Послушать", play_path(id: song.id) %>
     <% end %>
 </div>
-<div class = 'music_song_delete'>
-    <% if editable%>
+<% if editable%>
+    <div class = 'music_song_edit'>
+        <%= link_to "Редактировать", editfiles_path(midi_file_id: song.id)   %>
+    </div>
+    <div class = 'music_song_delete'>
         <%= button_to "Удалить", userfiles_path(midi_file: {id: song.id}), method: :delete %>
-    <% end %>
-</div>
+    </div>
+<% end %>
