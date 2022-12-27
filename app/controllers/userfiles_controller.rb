@@ -24,7 +24,7 @@ class UserfilesController < ApplicationController
     redirect_to userfiles_path
   end
   def change
-
+  end
   private
   def midifile_params
     params.require(:midi_file)
