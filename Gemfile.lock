@@ -92,10 +92,16 @@ GEM
     arbre (1.5.0)
       activesupport (>= 3.0.0, < 7.1)
       ruby2_keywords (>= 0.0.2, < 1.0)
+    autoprefixer-rails (10.4.13.0)
+      execjs (~> 2)
     bcrypt (3.1.18)
     bindex (0.8.1)
+    boot (0.0.1)
     bootsnap (1.15.0)
       msgpack (~> 1.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.4)
     cancancan (3.4.0)
     capybara (3.38.0)
@@ -126,6 +132,7 @@ GEM
       request_store (>= 1.0)
       ruby2_keywords
     erubi (1.11.0)
+    execjs (2.8.1)
     faker (3.0.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
@@ -322,7 +329,9 @@ DEPENDENCIES
   activeadmin
   activeadmin_addons
   bcrypt (~> 3.1.7)
+  boot
   bootsnap
+  bootstrap-sass (~> 3.4.1)
   cancancan
   capybara
   debug
@@ -331,6 +340,7 @@ DEPENDENCIES
   faker
   importmap-rails
   jbuilder
+  jquery-rails
   puma (~> 5.0)
   pundit
   rails (~> 7.0.4)
