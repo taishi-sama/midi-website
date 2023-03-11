@@ -26,8 +26,20 @@
     <% end %>
     <%= render 'shared/errors' %>
 </div>
-<div class = "music_list">
-<% @files.each do |song| %>
-    <%=render partial: 'shared/song', locals: {song: song}%>
-<% end %>
+<div class = "container">
+    <table class = "table">
+        <thead>
+              <tr>
+                <th>Автор</th>
+                <th>Название песни</th>
+                <th>Доступ</th>
+                <th></th>
+              </tr>
+        </thead>
+        <tbody>
+            <% @files.each do |song| %>
+                <%=render partial: 'shared/song', locals: {song: song}%>
+            <% end %>
+        </tbody>
+    </table>
 </div>

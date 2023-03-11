@@ -83,7 +83,7 @@ gem 'pundit'
 gem 'activeadmin_addons'
 # Use Sass to process CSS
 gem "sassc-rails"
+gem "boot"
 
-
-
-
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails'

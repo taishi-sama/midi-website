@@ -1,31 +1,36 @@
 <% editable = song.editable_for?(session[:user_id]) %>
-
-<div class = 'music_author'>
+<tr>
+<td>
     <%=song.author%>
-</div>
-<div class = 'music_song_name'>
+</td>
+<td>
     <%=song.song_name%>
-</div>
-<% if editable %>
-<div class = 'music_is_public'>
-    <% if song.public %>
-        Публично
-    <% else %>
-        Не публично
-    <% end %>
-</div>
-<% end %>
+</td>
 
-<div class = 'music_song_goto_play'>
+<td>
+    <% if editable %>
+        <% if song.public %>
+            Публично
+        <% else %>
+            Не публично
+        <% end %>
+    <% end %>
+</td>
+
+
+<td>
     <% if song.fluidsynth.present? %>
     <%= link_to "Послушать", play_path(id: song.id) %>
     <% end %>
-</div>
-<% if editable%>
-    <div class = 'music_song_edit'>
-        <%= link_to "Редактировать", editfiles_path(midi_file_id: song.id)   %>
-    </div>
-    <div class = 'music_song_delete'>
-        <%= button_to "Удалить", userfiles_path(midi_file: {id: song.id}), method: :delete %>
-    </div>
-<% end %>
+</td>
+<td>
+    <% if editable%>
+        <%= link_to "Изм.", editfiles_path(midi_file_id: song.id)   %>
+    <% end %>
+</td>
+<td>
+    <% if editable%>
+        <%= button_to "Удалить", userfiles_path(midi_file: {id: song.id}), method: :delete, class: "btn btn-xs btn-default" %>
+    <% end %>
+</td>
+</tr>
